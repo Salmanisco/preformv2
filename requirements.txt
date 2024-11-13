@@ -1,1 +1,7 @@
 streamlit
+tensorflow
+os
+random
+time
+PIL
+gdown
