@@ -116,27 +116,5 @@ with st.container():
             with st.spinner("Predicting..."):
                 time.sleep(1)
             st.header(f"_**{predict_class(processed_img)}**_")
-        
-
-
-st.divider()
-st.subheader("Try it yourself!")
-enable = st.checkbox("Enable camera")
-picture = st.camera_input("Take a picture", disabled=not enable)
-
-if picture:
-    # To read image file buffer as a PIL Image:
-    img = Image.open(picture)
-
-    # To convert PIL Image to numpy array:
-    user_image = np.array(img)
-
-    #predict
-    user_predict = st.button("Predict", icon = '🤖', key="user_predict")
-
-    if user_predict:
-        
-        with st.spinner("Predicting..."):
-            time.sleep(1)
 
         st.header(f"_**{predict_class(user_image)}**_")
