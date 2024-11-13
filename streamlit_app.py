@@ -66,7 +66,16 @@ def get_class(image):
 def load_model(model_path = 'Model/my_model.keras'):
     return tf.keras.models.load_model(model_path)
 
-model = load_model()
+@st.cache_resource
+def download_model():
+    url = "https://drive.google.com/uc?id=1oL_JMifBpYckyvpUBzN6wZzG2iTDqHhK"
+    output = "CNN_model.keras"
+    gdown.download(url=url, output=output)
+
+
+download_model()
+
+model = load_model(model_path='CNN_model.keras')
 
 label_mapping = {
     0: 'Blackspot',
