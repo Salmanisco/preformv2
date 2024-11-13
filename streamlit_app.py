@@ -116,5 +116,3 @@ with st.container():
             with st.spinner("Predicting..."):
                 time.sleep(1)
             st.header(f"_**{predict_class(processed_img)}**_")
-
-        st.header(f"_**{predict_class(user_image)}**_")
