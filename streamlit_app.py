@@ -20,9 +20,6 @@ st.set_page_config(
     }
 )
 
-pg = st.navigation(pages)
-pg.run()
-
 st.logo(image='Logo/machine-learning.png', 
         icon_image='Logo/machine-learning.png')
 
