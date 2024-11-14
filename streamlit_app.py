@@ -20,10 +20,6 @@ st.set_page_config(
     }
 )
 
-pages = [
-        st.Page("streamlit_app.py", title="Preform Classifier")
-    ]
-
 pg = st.navigation(pages)
 pg.run()
 
