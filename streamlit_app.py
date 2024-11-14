@@ -21,8 +21,7 @@ st.set_page_config(
 )
 
 pages = [
-        st.Page("streamlit_app.py", title="Preform Classifier"),
-        st.Page("/pages/2_Model_Training.py", title="Manage your account")
+        st.Page("streamlit_app.py", title="Preform Classifier")
     ]
 
 pg = st.navigation(pages)
