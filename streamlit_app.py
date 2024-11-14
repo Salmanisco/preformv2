@@ -20,8 +20,13 @@ st.set_page_config(
     }
 )
 
-with st.sidebar:
-    st.page_link('streamlit_app.py', label='Preform Classifier', icon='🤖')
+pages = [
+        st.Page("streamlit_app.py", title="Preform Classifier"),
+        st.Page("/pages/2_Model_Training.py", title="Manage your account")
+    ]
+
+pg = st.navigation(pages)
+pg.run()
 
 st.logo(image='Logo/machine-learning.png', 
         icon_image='Logo/machine-learning.png')
